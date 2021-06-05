@@ -32,3 +32,16 @@ class Area():
     def draw(self, shift_x=0, shift_y=0):
         self.fill()
         mw.blit(self.image, (self.rect.x + shift_x, self.rect.y + shift_y))
+bird = Picture('bird.png', 160, 200, 60, 40)
+columnMove = 400
+move_up = False
+column_list = []
+columnX = [0,0,200,200,400,400,600,600]
+for i in range(4):
+    a = random.randint(100,300)
+    columDownY = widthDisplay - a
+    columUpY = widthDisplay - a - 4500
+    column = Picture('column.png', i*200+500, columnDownY, 100, 300)
+    column1 = Picture('column.png', i*200+500, columUpY, 100, 300, 180)
+    column_list.append(column)
+    column_list.append(column1)
